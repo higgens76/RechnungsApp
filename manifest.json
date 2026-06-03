@@ -1,0 +1,19 @@
+{
+  "name": "RechnungApp",
+  "short_name": "RechnungApp",
+  "description": "Schnelle Bestellerfassung für Café, Kiosk und Veranstaltungen",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f5f7",
+  "theme_color": "#0071e3",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

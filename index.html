@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>RechnungApp</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0071e3" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="RechnungApp" />
+  <link rel="apple-touch-icon" href="icons/icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <button class="btn-hamburger" id="btnMenu" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <h1>RechnungApp</h1>
+  <div></div>
+</header>
+
+<div id="pageMenu">
+  <header>
+    <div class="header-left">
+      <button class="btn-back" id="btnBack" aria-label="Zurück"></button>
+    </div>
+    <h1>Menü</h1>
+    <div></div>
+  </header>
+  <div class="menu-content">
+    <div class="menu-section">
+      <button class="menu-item" id="btnOrders">
+        <span>Bestellungen</span>
+        <span class="menu-chevron">›</span>
+      </button>
+      <button class="menu-item" id="btnConfig">
+        <span>Produkte konfigurieren</span>
+        <span class="menu-chevron">›</span>
+      </button>
+    </div>
+    <div class="menu-section">
+      <button class="menu-item menu-item--danger" id="btnDeleteAll">
+        <span>Alle Warenkörbe löschen</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="product-grid" id="productGrid"></div>
+</main>
+
+<div class="checkout-bar">
+  <button class="btn-checkout" id="btnCheckout" disabled>Gesamt: 0,00 €</button>
+</div>
+
+<div id="pageConfig">
+  <header>
+    <div class="header-left">
+      <button class="btn-back" id="btnBackConfig" aria-label="Zurück"></button>
+    </div>
+    <h1>Produkte</h1>
+    <div></div>
+  </header>
+  <div class="config-list" id="configList"></div>
+  <div class="checkout-bar">
+    <button class="btn-checkout" id="btnAddProduct">+ Produkt hinzufügen</button>
+  </div>
+</div>
+
+<div id="pageOrders">
+  <header>
+    <div class="header-left">
+      <button class="btn-back" id="btnBackOrders" aria-label="Zurück"></button>
+    </div>
+    <h1>Bestellungen</h1>
+    <div></div>
+  </header>
+  <div class="orders-list" id="ordersList"></div>
+  <div class="checkout-bar">
+    <button class="btn-checkout" id="btnExport" disabled>Als JSON exportieren</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js');
+  }
+</script>
+</body>
+</html>
