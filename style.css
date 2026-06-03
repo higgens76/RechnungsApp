@@ -459,6 +459,54 @@ main {
   padding: 24px 0;
 }
 
+/* ── QR Page ── */
+#pageQr {
+  position: fixed;
+  inset: 0;
+  z-index: 153;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform .32s cubic-bezier(.4,0,.2,1);
+}
+#pageQr.active { transform: translateX(0); }
+
+.qr-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 32px 24px;
+  padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+}
+
+.qr-hint {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-align: center;
+}
+
+.qr-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  line-height: 0;
+}
+
+.qr-url {
+  font-size: .82rem;
+  color: var(--muted);
+  text-align: center;
+  word-break: break-all;
+  max-width: 280px;
+}
+
 /* ── Toast ── */
 .toast {
   position: fixed;

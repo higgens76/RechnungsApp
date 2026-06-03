@@ -1,13 +1,21 @@
-const CACHE = 'rechnungapp-v1';
+const CACHE = 'rechnungapp-v3';
 
 const ASSETS = [
   './',
   './index.html',
   './style.css',
-  './script.js',
   './manifest.json',
   './img/placeholder.svg',
   './icons/icon.svg',
+  './js/vendor/qrcode.min.js',
+  './js/data.js',
+  './js/ui.js',
+  './js/page-main.js',
+  './js/page-menu.js',
+  './js/page-orders.js',
+  './js/page-config.js',
+  './js/page-qr.js',
+  './js/app.js',
 ];
 
 // Beim ersten Laden alle Assets cachen
